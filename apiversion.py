@@ -1,5 +1,5 @@
 from __future__ import print_function
-import byteblowerll.byteblower as byteblower
+from byteblower.byteblowerll import byteblower
 
 try:
     instance = byteblower.ByteBlower.InstanceGet()
