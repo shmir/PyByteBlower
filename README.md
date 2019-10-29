@@ -33,3 +33,11 @@ This repository contains all public available Python examples on how to use the 
 * restructure to embed all samples under single sub-folder
 * add basic unit tests to test the new package (not functionality)
 * build setup with restriction for Windows / Python 2.7
+
+## Cheatsheet
+* To register EP and get real-time statistics run the following command:
+
+    ByteBlowerWirelessEndpoint.exe chassis-ip
+    
+    Note that this will open a new CMD window.
+* https://api.byteblower.com/python/byteblowerll.byteblower.ByteBlowerPort.html
