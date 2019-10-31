@@ -32,7 +32,7 @@ print("# Ports")
 for p in server.PhysicalInterfacesGet():
     print('\tId: {}'.format(p.IdGet() + 1))
     print('\tPort: {}'.format(p.NameGet()))
-    if p.ByteBlowerInterfaceCountGet() > 1:
+    if p.ByteBlowerInterfaceCountGet() > 0:
         for i in p.ByteBlowerInterfaceGet():
             print('\t\tId: {}'.format(i.PortIdGet()))
             print('\t\tPort: {}'.format(i.NameGet()))
@@ -41,6 +41,5 @@ print("# Endpoints")
 for d in meetingpoint.DeviceListGet():
     print('Endpoint: {}'.format(d.DeviceInfoGet().GivenNameGet()))
     print('Type: {}'.format(d.DeviceInfoGet().TypeGet()))
-    print('Description: {}'.format(d.DeviceInfoGet().DescriptionGet()))
     network_info = d.DeviceInfoGet().NetworkInfoGet()
     print('IPv4: {}'.format(network_info.IPv4Get()))
