@@ -21,16 +21,26 @@ bb = byteblower.ByteBlower.InstanceGet()
 server = bb.ServerAdd(SERVER_ADDRESS)
 meetingpoint = bb.MeetingPointAdd(MEETINGPOINT_ADDRESS)
 
+print('# Server')
+service_info = server.ServiceInfoGet()
+print('Type: {}'.format(service_info.TypeGet()))
+print('Series: {}'.format(service_info.SeriesGet()))
+print('Version: {}'.format(service_info.VersionGet()))
+print('Machine ID: {}'.format(service_info.MachineIDGet()))
+
 print("# Ports")
 for p in server.PhysicalInterfacesGet():
-    print('Port: {}'.format(p.NameGet()))
-
-print("# Trunks")
-for p in server.PhysicalInterfacesGet():
+    print('\tId: {}'.format(p.IdGet() + 1))
+    print('\tPort: {}'.format(p.NameGet()))
     if p.ByteBlowerInterfaceCountGet() > 1:
         for i in p.ByteBlowerInterfaceGet():
-            print('Port: {}'.format(i.NameGet()))
+            print('\t\tId: {}'.format(i.PortIdGet()))
+            print('\t\tPort: {}'.format(i.NameGet()))
 
 print("# Endpoints")
 for d in meetingpoint.DeviceListGet():
     print('Endpoint: {}'.format(d.DeviceInfoGet().GivenNameGet()))
+    print('Type: {}'.format(d.DeviceInfoGet().TypeGet()))
+    print('Description: {}'.format(d.DeviceInfoGet().DescriptionGet()))
+    network_info = d.DeviceInfoGet().NetworkInfoGet()
+    print('IPv4: {}'.format(network_info.IPv4Get()))

@@ -40,4 +40,5 @@ This repository contains all public available Python examples on how to use the 
     ByteBlowerWirelessEndpoint.exe chassis-ip
     
     Note that this will open a new CMD window.
-* https://api.byteblower.com/python/byteblowerll.byteblower.ByteBlowerPort.html
+
+* [API documentation]([https://api.byteblower.com/python/byteblowerll.byteblower.ByteBlowerPort.html])
