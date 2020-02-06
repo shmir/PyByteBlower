@@ -41,4 +41,4 @@ This repository contains all public available Python examples on how to use the 
     
     Note that this will open a new CMD window.
 
-* [API documentation]([https://api.byteblower.com/python/byteblowerll.byteblower.ByteBlowerPort.html])
+* [API documentation]([https://api.byteblower.com/python/])
