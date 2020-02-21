@@ -18,8 +18,9 @@ bb_cmd = [bb_clt, '-project', project, '-scenario', scenario, '-output', output]
 bb = byteblower.ByteBlower.InstanceGet()
 server = bb.ServerAdd(server_ip)
 
-port_45 = server.PortCreate('trunk-1-45')
-trigger = port_45.RxTriggerBasicAdd()
+wan_port = server.PortCreate('nontrunk-1')
+trigger = wan_port.RxTriggerBasicAdd()
+trigger.FilterSet("ip and host 80.5.180.2")
 history = trigger.ResultHistoryGet()
 
 traffic_running = False
