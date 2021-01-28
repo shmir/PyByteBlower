@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# encoding: utf-8
 
 from __future__ import print_function
 from setuptools import setup
@@ -47,7 +45,7 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.7',
         'Topic :: Software Development :: Testing :: Traffic Generation'],
     keywords='byteblower l2l3 test tool automation',
 )
